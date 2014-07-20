@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<TfrxReport Version="4.9.32" DotMatrixReport="False" IniFile="\Software\Fast Reports" PreviewOptions.Buttons="4095" PreviewOptions.Zoom="1" PrintOptions.Printer="预设" PrintOptions.PrintOnSheet="0" ReportOptions.CreateDate="41365.8154003472" ReportOptions.Description.Text="" ReportOptions.LastChange="41411.4253248148" ScriptLanguage="PascalScript" ScriptText.Text="&#13;&#10;begin&#13;&#10;&#13;&#10;end." PropData="044C656674024003546F7002080844617461736574730101063920446174615365743D22465F5072745F4C61624949492E66727844735F4C61622220446174615365744E616D653D2266727844735F4C6162220000095661726961626C65730100055374796C650100">
+  <TfrxDataPage Name="Data" Height="1000" Left="0" Top="0" Width="1000"/>
+  <TfrxReportPage Name="Page1" PaperWidth="60" PaperHeight="35" PaperSize="256" LeftMargin="1" RightMargin="1" TopMargin="1" BottomMargin="1" ColumnWidth="0" ColumnPositions.Text="" HGuides.Text="" VGuides.Text="">
+    <TfrxMasterData Name="MasterData1" Height="103.18111945" Left="0" Top="18.89765" Width="219.21274" ColumnWidth="0" ColumnGap="0" DataSet="F_Prt_LabIII.frxDs_Lab" DataSetName="frxDs_Lab" RowCount="0">
+      <TfrxMemoView Name="frxDs1strListID" Left="0" Top="0" Width="75.5906" Height="18.89765" ShowHint="False" DataField="strListID" DataSet="F_Prt_LabIII.frxDs_Lab" DataSetName="frxDs_Lab" Text="[frxDs_Lab.&#34;strListID&#34;]"/>
+      <TfrxMemoView Name="frxDs1strSDate" Left="143.62214" Top="0" Width="71.81107" Height="18.89765" ShowHint="False" DataField="strSDate" DataSet="F_Prt_LabIII.frxDs_Lab" DataSetName="frxDs_Lab" Text="[frxDs_Lab.&#34;strSDate&#34;]"/>
+      <TfrxMemoView Name="Memo2" Left="79.37013" Top="0" Width="71.81107" Height="18.89765" ShowHint="False" Text="交货日期："/>
+      <TfrxMemoView Name="Memo3" Left="0" Top="18.89765" Width="45.35436" Height="18.89765" ShowHint="False" Text="地址："/>
+      <TfrxMemoView Name="frxDs1strAddress" Left="45.35436" Top="18.89765" Width="68.03154" Height="18.89765" ShowHint="False" DataField="strAddress" DataSet="F_Prt_LabIII.frxDs_Lab" DataSetName="frxDs_Lab" Text="[frxDs_Lab.&#34;strAddress&#34;]"/>
+      <TfrxMemoView Name="frxDs1cabW_H_D" Left="117.16543" Top="56.69295" Width="102.04731" Height="18.89765" ShowHint="False" DataField="cabW_H_D" DataSet="F_Prt_LabIII.frxDs_Lab" DataSetName="frxDs_Lab" Text="[frxDs_Lab.&#34;cabW_H_D&#34;]"/>
+      <TfrxMemoView Name="frxDs1bodName" Left="0" Top="37.7953" Width="94.48825" Height="18.89765" ShowHint="False" DataField="bodName" DataSet="F_Prt_LabIII.frxDs_Lab" DataSetName="frxDs_Lab" Text="[frxDs_Lab.&#34;bodName&#34;]"/>
+      <TfrxMemoView Name="frxDs1bodCZh" Left="113.3859" Top="18.89765" Width="56.69295" Height="18.89765" ShowHint="False" DataField="bodCZh" DataSet="F_Prt_LabIII.frxDs_Lab" DataSetName="frxDs_Lab" Text="[frxDs_Lab.&#34;bodCZh&#34;]"/>
+      <TfrxMemoView Name="frxDs1bodH_W" Left="94.48825" Top="37.7953" Width="79.37013" Height="18.89765" ShowHint="False" DataField="bodH_W" DataSet="F_Prt_LabIII.frxDs_Lab" DataSetName="frxDs_Lab" Text="[frxDs_Lab.&#34;bodH_W&#34;]"/>
+      <TfrxMemoView Name="frxDs1bodI_N" Left="170.07885" Top="37.7953" Width="49.13389" Height="18.89765" ShowHint="False" DataField="bodI_N" DataSet="F_Prt_LabIII.frxDs_Lab" DataSetName="frxDs_Lab" Text="[frxDs_Lab.&#34;bodI_N&#34;]"/>
+      <TfrxMemoView Name="frxDs1labI_N" Left="170.07885" Top="18.89765" Width="49.13389" Height="18.89765" ShowHint="False" DataField="labI_N" DataSet="F_Prt_LabIII.frxDs_Lab" DataSetName="frxDs_Lab" Text="[frxDs_Lab.&#34;labI_N&#34;]"/>
+      <TfrxMemoView Name="frxDs1cabOth" Left="0" Top="56.69295" Width="113.3859" Height="18.89765" ShowHint="False" DataField="cabOth" DataSet="F_Prt_LabIII.frxDs_Lab" DataSetName="frxDs_Lab" Text="[frxDs_Lab.&#34;cabOth&#34;]"/>
+      <TfrxMemoView Name="frxDs_LabstrAddress" Left="64.25201" Top="79.37013" Width="113.3859" Height="18.89765" ShowHint="False" DataField="useName" DataSet="F_Prt_LabIII.frxDs_Lab" DataSetName="frxDs_Lab" Font.Charset="1" Font.Color="-16777208" Font.Height="-13" Font.Name="Arial" Font.Style="0" ParentFont="False" Text="[frxDs_Lab.&#34;useName&#34;]"/>
+      <TfrxMemoView Name="Memo1" Left="0" Top="79.37013" Width="71.81107" Height="18.89765" ShowHint="False" Font.Charset="1" Font.Color="-16777208" Font.Height="-13" Font.Name="Arial" Font.Style="0" ParentFont="False" Text="客户名称："/>
+    </TfrxMasterData>
+  </TfrxReportPage>
+</TfrxReport>

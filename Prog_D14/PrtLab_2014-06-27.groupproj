@@ -1,0 +1,48 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{14011011-C61B-40F3-A276-9EDE0A53E541}</ProjectGuid>
+		</PropertyGroup>
+		<ItemGroup>
+			<Projects Include="PrtLab.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="..\RegObj_D14\RegObj.dproj">
+				<Dependencies/>
+			</Projects>
+		</ItemGroup>
+		<ProjectExtensions>
+			<Borland.Personality>Default.Personality.12</Borland.Personality>
+			<Borland.ProjectType/>
+			<BorlandProject>
+				<Default.Personality/>
+			</BorlandProject>
+		</ProjectExtensions>
+		<Target Name="PrtLab">
+			<MSBuild Projects="PrtLab.dproj"/>
+		</Target>
+		<Target Name="PrtLab:Clean">
+			<MSBuild Targets="Clean" Projects="PrtLab.dproj"/>
+		</Target>
+		<Target Name="PrtLab:Make">
+			<MSBuild Targets="Make" Projects="PrtLab.dproj"/>
+		</Target>
+		<Target Name="RegObj">
+			<MSBuild Projects="..\RegObj_D14\RegObj.dproj"/>
+		</Target>
+		<Target Name="RegObj:Clean">
+			<MSBuild Targets="Clean" Projects="..\RegObj_D14\RegObj.dproj"/>
+		</Target>
+		<Target Name="RegObj:Make">
+			<MSBuild Targets="Make" Projects="..\RegObj_D14\RegObj.dproj"/>
+		</Target>
+		<Target Name="Build">
+			<CallTarget Targets="PrtLab;RegObj"/>
+		</Target>
+		<Target Name="Clean">
+			<CallTarget Targets="PrtLab:Clean;RegObj:Clean"/>
+		</Target>
+		<Target Name="Make">
+			<CallTarget Targets="PrtLab:Make;RegObj:Make"/>
+		</Target>
+		<Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+	</Project>

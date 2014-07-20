@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<TfrxReport Version="4.9.32" DotMatrixReport="False" IniFile="\Software\Fast Reports" PreviewOptions.Buttons="4095" PreviewOptions.Zoom="1" PrintOptions.Printer="预设" PrintOptions.PrintOnSheet="0" ReportOptions.CreateDate="41366.5920770486" ReportOptions.Description.Text="" ReportOptions.LastChange="41367.3874847106" ScriptLanguage="PascalScript" ScriptText.Text="begin&#13;&#10;&#13;&#10;end." PropData="044C656674024003546F7002080844617461736574730101064120446174615365743D22465F5072745F4F75745061636B696E672E6672784473312220446174615365744E616D653D2266727844735F4F75745061636B696E67220000095661726961626C65730100055374796C650100">
+  <TfrxDataPage Name="Data" Height="1000" Left="0" Top="0" Width="1000"/>
+  <TfrxReportPage Name="Page1" PaperWidth="70" PaperHeight="40" PaperSize="256" LeftMargin="1" RightMargin="1" TopMargin="1" BottomMargin="1" ColumnWidth="0" ColumnPositions.Text="" DataSet="F_Prt_OutPacking.frxDs1" DataSetName="frxDs_OutPacking" HGuides.Text="" VGuides.Text="">
+    <TfrxMemoView Name="Memo1" Left="113.3859" Top="0" Width="45.35436" Height="18.89765" ShowHint="False" Text="客户名"/>
+    <TfrxMemoView Name="Memo2" Left="0" Top="0" Width="45.35436" Height="18.89765" ShowHint="False" Text="订单号"/>
+    <TfrxMemoView Name="frxDs1strListID" Left="45.35436" Top="0" Width="68.03154" Height="18.89765" ShowHint="False" DataField="strListID" DataSet="F_Prt_OutPacking.frxDs1" DataSetName="frxDs_OutPacking" Text="[frxDs_OutPacking.&#34;strListID&#34;]"/>
+    <TfrxMemoView Name="frxDs1useName" Left="158.74026" Top="0" Width="56.69295" Height="18.89765" ShowHint="False" DataField="useName" DataSet="F_Prt_OutPacking.frxDs1" DataSetName="frxDs_OutPacking" Text="[frxDs_OutPacking.&#34;useName&#34;]"/>
+    <TfrxMemoView Name="Memo3" Left="0" Top="18.89765" Width="34.01577" Height="18.89765" ShowHint="False" Text="总数"/>
+    <TfrxMemoView Name="frxDs1cabCount" Left="34.01577" Top="18.89765" Width="79.37013" Height="18.89765" ShowHint="False" DataField="cabCount" DataSet="F_Prt_OutPacking.frxDs1" DataSetName="frxDs_OutPacking" Text="[frxDs_OutPacking.&#34;cabCount&#34;]"/>
+    <TfrxMemoView Name="frxDs1cabI_N" Left="113.3859" Top="18.89765" Width="102.04731" Height="18.89765" ShowHint="False" DataField="cabI_N" DataSet="F_Prt_OutPacking.frxDs1" DataSetName="frxDs_OutPacking" Text="[frxDs_OutPacking.&#34;cabI_N&#34;]"/>
+    <TfrxMemoView Name="frxDs1cabName" Left="0" Top="37.7953" Width="75.5906" Height="18.89765" ShowHint="False" DataField="cabName" DataSet="F_Prt_OutPacking.frxDs1" DataSetName="frxDs_OutPacking" Text="[frxDs_OutPacking.&#34;cabName&#34;]"/>
+    <TfrxMemoView Name="frxDs1cabH_H_D" Left="120.94496" Top="37.7953" Width="94.48825" Height="18.89765" ShowHint="False" DataField="cabH_H_D" DataSet="F_Prt_OutPacking.frxDs1" DataSetName="frxDs_OutPacking" Text="[frxDs_OutPacking.&#34;cabH_H_D&#34;]"/>
+    <TfrxMemoView Name="frxDs1address" Left="0" Top="56.69295" Width="215.43321" Height="18.89765" ShowHint="False" DataField="address" DataSet="F_Prt_OutPacking.frxDs1" DataSetName="frxDs_OutPacking" Text="[frxDs_OutPacking.&#34;address&#34;]"/>
+    <TfrxMemoView Name="frxDs1coName" Left="0" Top="75.5906" Width="113.3859" Height="18.89765" ShowHint="False" DataField="coName" DataSet="F_Prt_OutPacking.frxDs1" DataSetName="frxDs_OutPacking" Text="[frxDs_OutPacking.&#34;coName&#34;]"/>
+    <TfrxMemoView Name="frxDs1coPhon" Left="113.3859" Top="75.5906" Width="102.04731" Height="18.89765" ShowHint="False" DataField="coPhon" DataSet="F_Prt_OutPacking.frxDs1" DataSetName="frxDs_OutPacking" Text="[frxDs_OutPacking.&#34;coPhon&#34;]"/>
+    <TfrxMemoView Name="frxDs1cabNo" Left="75.5906" Top="37.7953" Width="45.35436" Height="18.89765" ShowHint="False" DataField="cabNo" DataSet="F_Prt_OutPacking.frxDs1" DataSetName="frxDs_OutPacking" Text="[frxDs_OutPacking.&#34;cabNo&#34;]"/>
+  </TfrxReportPage>
+</TfrxReport>

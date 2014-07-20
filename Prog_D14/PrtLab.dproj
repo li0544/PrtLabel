@@ -1,0 +1,196 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{8DBCED52-14BD-400A-B0CE-CD362D026780}</ProjectGuid>
+			<MainSource>PrtLab.dpr</MainSource>
+			<Config Condition="'$(Config)'==''">Debug</Config>
+			<DCC_DCCCompiler>DCC32</DCC_DCCCompiler>
+			<ProjectVersion>12.0</ProjectVersion>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_1)'!=''">
+			<Cfg_1>true</Cfg_1>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_2)'!=''">
+			<Cfg_2>true</Cfg_2>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!=''">
+			<DCC_DependencyCheckOutputName>..\PrtLab\PrtLab.exe</DCC_DependencyCheckOutputName>
+			<DCC_ImageBase>00400000</DCC_ImageBase>
+			<DCC_UsePackage>vcl;rtl;vclx;indy;inet;xmlrtl;vclie;inetdbbde;inetdbxpress;dbrtl;dsnap;dsnapcon;vcldb;soaprtl;VclSmp;dbexpress;dbxcds;inetdb;bdertl;vcldbx;webdsnap;websnap;adortl;ibxpress;teeui;teedb;tee;dss;visualclx;visualdbclx;vclactnband;vclshlctrls;IntrawebDB_50_70;Intraweb_50_70;dclOfficeXP;Rave70VCL;Rave70CLX</DCC_UsePackage>
+			<DCC_UnitAlias>WinTypes=Windows;WinProcs=Windows;DbiTypes=BDE;DbiProcs=BDE;DbiErrs=BDE;WinTypes=Windows;WinProcs=Windows;$(DCC_UnitAlias)</DCC_UnitAlias>
+			<DCC_Platform>x86</DCC_Platform>
+			<DCC_ExeOutput>../PrtLab</DCC_ExeOutput>
+			<DCC_K>false</DCC_K>
+			<DCC_N>true</DCC_N>
+			<DCC_S>false</DCC_S>
+			<DCC_SymbolReferenceInfo>1</DCC_SymbolReferenceInfo>
+			<DCC_E>false</DCC_E>
+			<DCC_F>false</DCC_F>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_1)'!=''">
+			<DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
+			<DCC_Define>RELEASE;$(DCC_Define)</DCC_Define>
+			<DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+			<DCC_DebugInformation>false</DCC_DebugInformation>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_2)'!=''">
+			<DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
+		</PropertyGroup>
+		<ItemGroup>
+			<DelphiCompile Include="PrtLab.dpr">
+				<MainSource>MainSource</MainSource>
+			</DelphiCompile>
+			<DCCReference Include="..\Form\U_Prt_Lab2.PAS">
+				<Form>F_Prt_Lab</Form>
+			</DCCReference>
+			<DCCReference Include="..\Form\U_Prt.pas">
+				<Form>F_Prt</Form>
+			</DCCReference>
+			<DCCReference Include="..\Form\U_Price.pas">
+				<Form>F_Price</Form>
+			</DCCReference>
+			<DCCReference Include="..\Form\U_Prt_Prc2.pas">
+				<Form>F_Prt_Prc2</Form>
+			</DCCReference>
+			<DCCReference Include="..\Form\U_Prt_Opt.pas">
+				<Form>F_Prt_Opt</Form>
+			</DCCReference>
+			<DCCReference Include="..\Form\U_Debug.pas">
+				<Form>F_Debug</Form>
+			</DCCReference>
+			<DCCReference Include="..\Form\U_Pb.pas">
+				<Form>F_PB</Form>
+			</DCCReference>
+			<DCCReference Include="..\Form\U_Price_Add.pas">
+				<Form>F_Price_Add</Form>
+			</DCCReference>
+			<DCCReference Include="..\Form\U_RegI.pas">
+				<Form>F_RegI</Form>
+			</DCCReference>
+			<DCCReference Include="..\Form\U_Prt_Proj2.pas">
+				<Form>F_Prt_Proj2</Form>
+			</DCCReference>
+			<DCCReference Include="..\Form\U_List.pas">
+				<Form>F_List</Form>
+			</DCCReference>
+			<DCCReference Include="..\Form\U_Flash.pas">
+				<Form>F_Flash</Form>
+			</DCCReference>
+			<DCCReference Include="..\Form\U_List_Opt.pas">
+				<Form>F_List_Opt</Form>
+			</DCCReference>
+			<DCCReference Include="..\Form\U_Prt_Prd3.pas">
+				<Form>F_Prt_Prd2</Form>
+			</DCCReference>
+			<DCCReference Include="..\Common\CondExpression.pas"/>
+			<DCCReference Include="..\Common\U_ExeCabPrice.pas"/>
+			<DCCReference Include="..\Common\U_HWInf.pas"/>
+			<DCCReference Include="..\Common\U_MD5.pas"/>
+			<DCCReference Include="..\Common\U_PBRun.pas"/>
+			<DCCReference Include="..\Common\U_Reg.pas"/>
+			<DCCReference Include="..\Common\UList.pas"/>
+			<DCCReference Include="..\Common\UParam.pas"/>
+			<DCCReference Include="..\Common\UPub.pas"/>
+			<DCCReference Include="..\Form\U_Prt_LabIII.pas">
+				<Form>F_Prt_LabIII</Form>
+			</DCCReference>
+			<DCCReference Include="..\Form\U_Prt_OutPacking.pas">
+				<Form>F_Prt_OutPacking</Form>
+			</DCCReference>
+			<DCCReference Include="..\Common\UIni.pas"/>
+			<DCCReference Include="..\Form\U_Prt_Edit.pas">
+				<Form>F_Prt_Edit</Form>
+			</DCCReference>
+			<DCCReference Include="..\Form\U_List_PrcAdd.pas">
+				<Form>F_List_PrcAdd</Form>
+			</DCCReference>
+			<DCCReference Include="..\Form\U_Prt_Drawer.pas">
+				<Form>F_Prt_Drawer</Form>
+			</DCCReference>
+			<DCCReference Include="..\Form\U_Prt_PrdIV.pas">
+				<Form>F_Prt_PrdIV</Form>
+			</DCCReference>
+			<DCCReference Include="..\Form\U_List_Import.pas">
+				<Form>F_List_Import</Form>
+			</DCCReference>
+			<DCCReference Include="..\Form\U_List_Import_Opt.pas">
+				<Form>F_List_Import_Opt</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\..\..\第三方控件\wpvcl\Pub\UADO.pas"/>
+			<DCCReference Include="..\..\..\..\第三方控件\wpvcl\Pub\UFReport.pas"/>
+			<DCCReference Include="..\Form\Standard\U_List_Standard.pas">
+				<Form>F_List_Standard</Form>
+			</DCCReference>
+			<DCCReference Include="..\Form\List\U_List_Bod.pas">
+				<Form>F_List_Bod</Form>
+			</DCCReference>
+			<DCCReference Include="..\Form\Prt\U_Prt_Prd_Opt.pas">
+				<Form>F_Prt_Prd_Opt</Form>
+			</DCCReference>
+			<BuildConfiguration Include="Base">
+				<Key>Base</Key>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Debug">
+				<Key>Cfg_2</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Release">
+				<Key>Cfg_1</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+		</ItemGroup>
+		<Import Project="$(BDS)\Bin\CodeGear.Delphi.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Delphi.Targets')"/>
+		<ProjectExtensions>
+			<Borland.Personality>Delphi.Personality.12</Borland.Personality>
+			<Borland.ProjectType>VCLApplication</Borland.ProjectType>
+			<BorlandProject>
+				<Delphi.Personality>
+					<Source>
+						<Source Name="MainSource">PrtLab.dpr</Source>
+					</Source>
+					<Parameters>
+						<Parameters Name="UseLauncher">False</Parameters>
+						<Parameters Name="LoadAllSymbols">True</Parameters>
+						<Parameters Name="LoadUnspecifiedSymbols">False</Parameters>
+					</Parameters>
+					<VersionInfo>
+						<VersionInfo Name="IncludeVerInfo">True</VersionInfo>
+						<VersionInfo Name="AutoIncBuild">True</VersionInfo>
+						<VersionInfo Name="MajorVer">1</VersionInfo>
+						<VersionInfo Name="MinorVer">13</VersionInfo>
+						<VersionInfo Name="Release">517</VersionInfo>
+						<VersionInfo Name="Build">171</VersionInfo>
+						<VersionInfo Name="Debug">False</VersionInfo>
+						<VersionInfo Name="PreRelease">False</VersionInfo>
+						<VersionInfo Name="Special">False</VersionInfo>
+						<VersionInfo Name="Private">False</VersionInfo>
+						<VersionInfo Name="DLL">False</VersionInfo>
+						<VersionInfo Name="Locale">2052</VersionInfo>
+						<VersionInfo Name="CodePage">936</VersionInfo>
+					</VersionInfo>
+					<VersionInfoKeys>
+						<VersionInfoKeys Name="CompanyName">W_P_</VersionInfoKeys>
+						<VersionInfoKeys Name="FileDescription"/>
+						<VersionInfoKeys Name="FileVersion">1.13.517.171</VersionInfoKeys>
+						<VersionInfoKeys Name="InternalName"/>
+						<VersionInfoKeys Name="LegalCopyright"/>
+						<VersionInfoKeys Name="LegalTrademarks"/>
+						<VersionInfoKeys Name="OriginalFilename"/>
+						<VersionInfoKeys Name="ProductName"/>
+						<VersionInfoKeys Name="ProductVersion">1.13.04.01</VersionInfoKeys>
+						<VersionInfoKeys Name="Comments"/>
+						<VersionInfoKeys Name="LastCompiledTime">2012-11-22 9:09:03</VersionInfoKeys>
+					</VersionInfoKeys>
+					<Excluded_Packages/>
+				</Delphi.Personality>
+				<ModelSupport>False</ModelSupport>
+			</BorlandProject>
+			<ProjectFileVersion>12</ProjectFileVersion>
+		</ProjectExtensions>
+	</Project>
