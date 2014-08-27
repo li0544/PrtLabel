@@ -25,86 +25,90 @@ type
   //板材
   P_PBoard = ^T_Board;
   T_Board = record
-    Index      : Integer;          //序号
-    cabIndex   : Integer;          //橱柜序号
-    bodID      : Integer;          //板材序号
-    bodH       : Double;           //长
-    bodW       : Double;           //宽
-    bodNum     : Integer;          //数量
-    bodXZh     : string; 			     //旋转 修改原来长变量名
-    bodCZh     : string; 			     //材质
-    bodOth     : string;           //备注
-    bodFlag    : string;           //图号
-    bodName    : string;           //名称
-    bodType    : string;           //类型 上柜、下柜
-    bodEdge    : Double;           //封边
-    bodArea    : Double;           //面积
-    bodPrice   : Double;           //价额
-    cabNam     : string;     			 //橱柜名称，无用
-    bodInfo    : string;    			  //工艺，括号内容
+    Index      : Integer;                                                       //序号
+    cabIndex   : Integer;                                                       //橱柜序号
+    bodID      : Integer;                                                       //板材序号
+    bodH       : Double;                                                        //长
+    bodW       : Double;                                                        //宽
+    bodNum     : Integer;                                                       //数量
+    bodXZh     : string; 			                                                  //旋转 修改原来长变量名
+    bodCZh     : string; 			                                                  //材质
+    bodOth     : string;                                                        //备注
+    bodFlag    : string;                                                        //图号
+    bodName    : string;                                                        //名称
+    bodType    : string;                                                        //类型 上柜、下柜
+    bodEdge    : Double;                                                        //封边
+    bodArea    : Double;                                                        //面积
+    bodPrice   : Double;                                                        //价额
+    cabNam     : string;     			                                              //橱柜名称，无用
+    bodInfo    : string;    			                                              //工艺，括号内容
   end;
 
   //五金
   P_PhdWare = ^T_hdWare;
   T_hdWare = record
-    Index      : Integer;          //序号
-    cabIndex   : Integer;          //序号
-    cabFlag    : string;           //橱柜图号
-    hdID       : Integer;          //板材序号
-    hdNum      : Integer;          //数量
-    hdCZh      : string; 			     //材质
-    hdOth      : string;           //备注
-    hdFlag     : string;           //图号
-    hdName     : string;           //名称
-    cabType    : string;           //类型 上柜、下柜
-    strType    : string;           //五金、非五金
-    hdArea     : Double;           //面积
-    hdPrice    : Double;           //单价
-    hdSumPrice : Double;           //金额
-    cabNam     : string;     			 //橱柜名称，无用
-    hdInfo     : string;    			 //工艺，括号内容
+    Index      : Integer;                                                       //序号
+    cabIndex   : Integer;                                                       //序号
+    cabFlag    : string;                                                        //橱柜图号
+    hdID       : Integer;                                                       //板材序号
+    hdNum      : Integer;                                                       //数量
+    hdCZh      : string; 			                                                  //材质
+    hdOth      : string;                                                        //备注
+    hdFlag     : string;                                                        //图号
+    hdName     : string;                                                        //名称
+    cabType    : string;                                                        //类型 上柜、下柜
+    strType    : string;                                                        //五金、非五金
+    hdArea     : Double;                                                        //面积
+    hdPrice    : Double;                                                        //单价
+    hdSumPrice : Double;                                                        //金额
+    cabNam     : string;     		                                             	  //橱柜名称，无用
+    hdInfo     : string;    		                                                //工艺，括号内容
   end;
 
   //橱柜
   P_PCabinet = ^T_Cabinet;
   T_Cabinet = record
-    Index     : Integer;          //序号
-    cabID     : string;           //编号
-    cabW      : Double;           //宽
-    cabH      : Double;           //高
-    cabD      : Double;           //深
-    cabC_W    : Double;           //合计宽度
-    cabW_H_D  : string;           //尺寸
-    cabTypeID : string;           //上柜W，下柜B
-    cabName   : string;           //名称
-    cabOth    : string;           //备注
-    cabType   : string;           //上柜、下柜
-    cabGB     : string;           //有无隔板
-    cabNum    : Integer;          //数量
-    cabNDoor  : Integer;          //门板数量
-    cabNBack  : Integer;          //柜体板数量
-    cabNBody  : Integer;          //背板数量
-    cabNCB    : Integer;          //侧板数量
-    cabNLT    : Integer;          //拉条数量
-    cabNFLT   : Integer;          //前拉条数量
-    cabNBLT   : Integer;          //后拉条数量
-    cabNGB_G  : Integer;          //隔板数量 活隔
-    cabNGB    : Integer;          //隔板数量 固隔
-    cabNDDB   : Integer;          //底顶板数量
-    cabNBUp   : Integer;          //顶板数量
-    cabNBDown : Integer;          //底板数量
-    cabNFJB   : Integer;          //附加板数量
-    cabBodNum : Integer;          //板材数量
-    cabhdwNum : Integer;          //五金数量
-    AreaDoor  : Double;           //门板面积
-    AreaBack  : Double;           //背板面积
-    AreaBody  : Double;           //柜体板面积
-    PrcDoor   : Double;           //门板价格
-    PrcBack   : Double;           //背板价格
-    PrcBody   : Double;           //柜体板价格
-    PrcAll    : Double;           //柜体价格
-    bod       : array of T_Board;  //板材数据
-    hdw       : array of T_hdWare; //五金数据
+    Index     : Integer;                                                        //序号
+    cabID     : string;                                                         //编号
+    cabW      : Double;                                                         //宽
+    cabH      : Double;                                                         //高
+    cabD      : Double;                                                         //深
+    cabC_W    : Double;                                                         //合计宽度
+    cabW_H_D  : string;                                                         //尺寸
+    cabTypeID : string;                                                         //上柜W，下柜B
+    cabName   : string;                                                         //名称
+    cabOth    : string;                                                         //备注
+    cabType   : string;                                                         //上柜、下柜
+    cabGB     : string;                                                         //有无隔板
+    bodyCZ    : string;                                                         //柜体材质
+    doorCZ    : string;                                                         //门板材质
+    backCZ    : string;                                                         //背板材质
+
+    cabNum    : Integer;                                                        //数量
+    cabNDoor  : Integer;                                                        //门板数量
+    cabNBack  : Integer;                                                        //柜体板数量
+    cabNBody  : Integer;                                                        //背板数量
+    cabNCB    : Integer;                                                        //侧板数量
+    cabNLT    : Integer;                                                        //拉条数量
+    cabNFLT   : Integer;                                                        //前拉条数量
+    cabNBLT   : Integer;                                                        //后拉条数量
+    cabNGB_G  : Integer;                                                        //隔板数量 活隔
+    cabNGB    : Integer;                                                        //隔板数量 固隔
+    cabNDDB   : Integer;                                                        //底顶板数量
+    cabNBUp   : Integer;                                                        //顶板数量
+    cabNBDown : Integer;                                                        //底板数量
+    cabNFJB   : Integer;                                                        //附加板数量
+    cabBodNum : Integer;                                                        //板材数量
+    cabhdwNum : Integer;                                                        //五金数量
+    AreaDoor  : Double;                                                         //门板面积
+    AreaBack  : Double;                                                         //背板面积
+    AreaBody  : Double;                                                         //柜体板面积
+    PrcDoor   : Double;                                                         //门板价格
+    PrcBack   : Double;                                                         //背板价格
+    PrcBody   : Double;                                                         //柜体板价格
+    PrcAll    : Double;                                                         //柜体价格
+    bod       : array of T_Board;                                               //板材数据
+    hdw       : array of T_hdWare;                                              //五金数据
   end;
 
   //打印标签数据明细
@@ -266,6 +270,9 @@ type
     hdwPrc     : array of T_hdWare;   //五金统计
     tsPrc      : array of TCabTsPrc;  //特殊加价公式及金额
     cabDrawer  : array of TCabDrawer; //抽屉报表数据
+
+    doorOth_col: TStrings;
+    doorOth_val: TStringList;
   end;
 
 {$REGION '变量及常量'}
@@ -577,13 +584,17 @@ begin
   strm1.Free; }
   b1 := FiIeToByteArray(fileName);
 
-  //开始转换
-  for i := 0 to $3FF do
+  //软件运行时数据库格式会不同，运行时byte[0]=00,关闭后byte[0]=15
+  if b1[0] <> 00 then
   begin
-    b2 := b1[i];
-    i1 := b2 div $10;
-    i2 := b2 mod $10;
-    b1[i] := i_h[i1] * $10 + i_l[i2];
+    //开始转换
+    for i := 0 to $3FF do
+    begin
+      b2 := b1[i];
+      i1 := b2 div $10;
+      i2 := b2 mod $10;
+      b1[i] := i_h[i1] * $10 + i_l[i2];
+    end;
   end;
 
   {strm2 := TFileStream.Create(fileName + '.mdb', fmCreate);

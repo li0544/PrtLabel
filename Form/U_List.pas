@@ -108,10 +108,11 @@ begin
 
     strSQL := 'SELECT ListID AS 订单编号, 交货日期 AS 处理时间,导入时间, 安装地址, 门板材质, '
     + '背板材质, 柜体板材质, 客户姓名, 联系方式, 生产制作单 AS 生产制作单标题, '
-    + '开料计划表 AS 开料计划表标题, 报价单 AS 报价单标题 '
+    + '开料计划表 AS 开料计划表标题, 报价单 AS 报价单标题,门板面积,背板面积,柜体板面积 '
     + 'FROM List WHERE ListID LIKE ''%' + EdtListID.Text + '%'' '
     + 'AND 交货日期 >='''+ FormatDateTime('yyyy-MM-dd',DateTimePickerStart.Date) +''' '
-    + 'AND 交货日期 <='''+ FormatDateTime('yyyy-MM-dd',DateTimePickerEnd.Date) +''' ';
+    + 'AND 交货日期 <='''+ FormatDateTime('yyyy-MM-dd',DateTimePickerEnd.Date) +''' '
+    + ' ORDER BY 导入时间 DESC, ListID ASC';
     //+ 'ORDER BY 交货日期 DESC, ListID ASC';
     AQrySel(AQry1, strSQL);
     AQrySel(AQry2, strSQL);
@@ -124,11 +125,11 @@ var
   strSQL: string;
 begin
 
-    strSQL := 'SELECT ListID AS 订单编号, 交货日期 AS 处理时间,导入时间, 安装地址, 门板材质, '
+    strSQL := 'SELECT top 10 ListID AS 订单编号, 交货日期 AS 处理时间,导入时间, 安装地址, 门板材质, '
     + '背板材质, 柜体板材质, 客户姓名, 联系方式, 生产制作单 AS 生产制作单标题, '
-    + '开料计划表 AS 开料计划表标题, 报价单 AS 报价单标题 '
-    + 'FROM List WHERE ListID LIKE ''%' + EdtListID.Text + '%'' ';
-    //+ 'ORDER BY 交货日期 DESC, ListID ASC';
+    + '开料计划表 AS 开料计划表标题, 报价单 AS 报价单标题,门板面积,背板面积,柜体板面积 '
+    + 'FROM List WHERE ListID LIKE ''%' + EdtListID.Text + '%'' '
+    + ' ORDER BY 导入时间 DESC, ListID ASC';
     AQrySel(AQry1, strSQL);
     AQrySel(AQry2, strSQL);
     //FillListView(LVList, AQry1);
@@ -338,6 +339,7 @@ begin
     108:    //编辑订单明细
     begin
       showForm(F_List_Bod);
+      F_List_Bod.btnQry.Click;
     end;
     7:
     begin
@@ -358,6 +360,8 @@ var
   tag : Integer;
   strNewListID : string;
   i : Integer;
+  ado1: TADO;
+  strSQL: string;
 begin
 
   tag := (Sender AS TMenuItem).Tag ;
@@ -428,9 +432,29 @@ begin
       end;
 
       if MessageDlg('确定要删除订单[' + AQry2.FieldValues['订单编号'] + ']吗？',
-        mtInformation,[mbYes,mbNo],0) <> IDYES   then  Exit;
-      AQry2.DELETE;
-      ListRefreshAll();
+        mtInformation,[mbYes,mbNo],0) <> IDYES
+      then  Exit;
+
+      ado1 := TADO.Create(nil);
+      for i := 0 to DBGridEh1.SelectedRows.Count - 1 do
+      begin
+        AQry2.GotoBookmark(Pointer(DBGridEh1.SelectedRows.Items[i]));
+
+        strSQL := 'DELETE FROM List WHERE ListID=''' + List.strListID + '''';
+        ado1.Cmd(strSQL);
+
+        strSQL := 'DELETE FROM TCab WHERE ListID=''' + List.strListID + '''';
+        ado1.Cmd(strSQL);
+
+        strSQL := 'DELETE FROM TBod WHERE ListID=''' + List.strListID + '''';
+        ado1.Cmd(strSQL);
+
+        strSQL := 'DELETE FROM THDWare WHERE ListID=''' + List.strListID + '''';
+        ado1.Cmd(strSQL);
+
+      end;
+      ado1.Free;
+      ListRefresh();
       strListID := '' ;
     end;
 
@@ -489,7 +513,7 @@ var
   i : Integer;
   i_w : Integer;
 begin
-
+  {
   AQry2.AfterScroll := nil;
   for i := 0 to DBGridEh1.Columns.Count - 1 do
   begin
@@ -504,12 +528,15 @@ begin
     end;
   end;
   AQry2.AfterScroll := AQry2AfterScroll;
+  }
 end;
 
 procedure TF_List.AQry2AfterScroll(DataSet: TDataSet);
 begin
   strListID := AQry2.FieldValues['订单编号'];
   List.strListID := AQry2.FieldValues['订单编号'];
+
+  AQrySel(F_Prt.ADOQry_List, 'SELECT * FROM List WHERE ListID=''' + List.strListID + '''');
 end;
 
 end.

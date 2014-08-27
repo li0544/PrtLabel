@@ -365,6 +365,7 @@ object F_List_Standard: TF_List_Standard
       FooterFont.Height = -11
       FooterFont.Name = 'Tahoma'
       FooterFont.Style = []
+      Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
       OptionsEh = [dghFixed3D, dghHighlightFocus, dghClearSelection, dghAutoSortMarking, dghMultiSortMarking, dghDblClickOptimizeColWidth, dghDialogFind, dghColumnResize, dghColumnMove, dghExtendVertLines]
       RowDetailPanel.Color = clBtnFace
       RowHeight = 22
@@ -921,17 +922,25 @@ object F_List_Standard: TF_List_Standard
       Transparent = True
     end
     object Lab1: TLabel
-      Left = 256
-      Top = 15
+      Left = 192
+      Top = 18
       Width = 56
       Height = 20
       Caption = #37096#20214#21517#31216
       Transparent = True
     end
+    object label3: TLabel
+      Left = 382
+      Top = 18
+      Width = 28
+      Height = 20
+      Caption = #26448#36136
+      Transparent = True
+    end
     object btn6: TRzBitBtn
       Tag = 9
-      Left = 600
-      Top = 9
+      Left = 648
+      Top = 12
       Width = 96
       Height = 32
       Caption = #36820#22238
@@ -944,8 +953,8 @@ object F_List_Standard: TF_List_Standard
     end
     object btnOth: TRzBitBtn
       Tag = 6
-      Left = 488
-      Top = 9
+      Left = 536
+      Top = 12
       Width = 96
       Height = 32
       Caption = #26597#35810
@@ -957,11 +966,18 @@ object F_List_Standard: TF_List_Standard
       NumGlyphs = 2
     end
     object tboxName: TRzEdit
-      Left = 328
-      Top = 13
-      Width = 145
+      Left = 264
+      Top = 14
+      Width = 98
       Height = 28
       TabOrder = 2
+    end
+    object tboxCZh: TRzEdit
+      Left = 416
+      Top = 14
+      Width = 98
+      Height = 28
+      TabOrder = 3
     end
   end
   object ADOQry1: TADOQuery
@@ -985,7 +1001,7 @@ object F_List_Standard: TF_List_Standard
     Left = 162
     Top = 66
     Bitmap = {
-      494C01013A004000140010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01013A004000200010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       000000000000360000002800000040000000F0000000010020000000000000F0
       0000000000000000000000000000000000000000000000000000000000000000
       00000000000000000000D9D9D900D4D4D400D3D3D300D5D5D500DADADA000000

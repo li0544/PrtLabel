@@ -1,0 +1,29 @@
+object F_Prt_Prd_DoorOth: TF_Prt_Prd_DoorOth
+  Left = 0
+  Top = 0
+  BorderStyle = bsDialog
+  Caption = #38376#26495
+  ClientHeight = 345
+  ClientWidth = 464
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poScreenCenter
+  OnCreate = FormCreate
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object btnOK: TButton
+    Left = 304
+    Top = 288
+    Width = 97
+    Height = 33
+    Caption = #30830#23450
+    TabOrder = 0
+    OnClick = btnOKClick
+  end
+end

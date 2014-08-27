@@ -27,6 +27,8 @@ type
     ImageListil1: TImageList;
     Lab1: TLabel;
     tboxName: TRzEdit;
+    label3: TLabel;
+    tboxCZh: TRzEdit;
     procedure FormCreate(Sender: TObject);
     procedure btnOthClick(Sender: TObject);
     procedure btn_Click(Sender: TObject);
@@ -62,10 +64,15 @@ procedure TF_List_Standard.btnOthClick(Sender: TObject);
 var
   strSQL : string;
 begin
-  strSQL := 'SELECT Top 100 [Name] AS 名称,H AS 长度,W AS 宽度,CZh AS 材质,GYi AS 工艺,Bar AS 标志条码 FROM TBod_Standard where 1=1 ';
+  strSQL := 'SELECT Top 100 [Name] AS 名称,H AS 长度,W AS 宽度,CZh AS 材质,GYi AS 工艺,Bar AS 标志条码 '
+    + ' FROM TBod_Standard where 1=1 ';
   if tboxName.Text <> '' then
   begin
-    strSQL := strSQL + ' AND [Name] LIKE ''*' + tboxName.Text + '*'' ';
+    strSQL := strSQL + ' AND [Name] LIKE ''%' + tboxName.Text + '%'' ';
+  end;
+  if tboxCZh.Text <> '' then
+  begin
+    strSQL := strSQL + ' AND [CZh] LIKE ''%' + tboxCZh.Text + '%'' ';
   end;
   AQrySel(ADOQry1, strSQL);
 end;
@@ -73,7 +80,8 @@ end;
 procedure TF_List_Standard.FormCreate(Sender: TObject);
 begin
   ADOQry1.ConnectionString := getConStr;
-  AQrySel(ADOQry1, 'SELECT Top 5 Name AS 名称,H AS 长度,W AS 宽度,CZh AS 材质,GYi AS 工艺,Bar AS 标志条码 FROM TBod_Standard ');
+  AQrySel(ADOQry1, 'SELECT Top 100 Name AS 名称,H AS 长度,W AS 宽度,CZh AS 材质,GYi AS 工艺,Bar AS 标志条码 '
+    + ' FROM TBod_Standard ');
 end;
 
 procedure TF_List_Standard.btn_Click(Sender: TObject);
@@ -148,7 +156,12 @@ begin
       begin
         Exit;
       end;
-      ADOQry1.Delete;
+      for i := 0 to grid1.SelectedRows.Count - 1 do
+      begin
+        ADOQry1.GotoBookmark(Pointer(grid1.SelectedRows.Items[i]));
+        ADOQry1.Delete;
+      end;
+      //grid1.SelectedRows.Delete;
     end;
     //编辑图片
     104:
@@ -165,6 +178,7 @@ begin
     106:
     begin
       if (ADOQry1.State = dsEdit) or (ADOQry1.State = dsInsert) then ADOQry1.Post;
+
     end;
 
   end;

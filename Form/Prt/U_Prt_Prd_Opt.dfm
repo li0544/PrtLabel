@@ -2,8 +2,8 @@ object F_Prt_Prd_Opt: TF_Prt_Prd_Opt
   Left = 0
   Top = 0
   Caption = #29983#20135#21046#20316#21333#35774#32622
-  ClientHeight = 429
-  ClientWidth = 783
+  ClientHeight = 453
+  ClientWidth = 848
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -13,14 +13,14 @@ object F_Prt_Prd_Opt: TF_Prt_Prd_Opt
   OldCreateOrder = False
   OnCreate = FormCreate
   DesignSize = (
-    783
-    429)
+    848
+    453)
   PixelsPerInch = 96
   TextHeight = 13
   object panel2: TRzPanel
     Left = 0
     Top = 0
-    Width = 783
+    Width = 848
     Height = 57
     Align = alTop
     BorderOuter = fsGroove
@@ -36,12 +36,12 @@ object F_Prt_Prd_Opt: TF_Prt_Prd_Opt
     ExplicitLeft = -290
     ExplicitWidth = 865
     DesignSize = (
-      783
+      848
       57)
     object img1: TImage
       Left = 2
       Top = 2
-      Width = 779
+      Width = 844
       Height = 53
       Align = alClient
       Picture.Data = {
@@ -582,18 +582,19 @@ object F_Prt_Prd_Opt: TF_Prt_Prd_Opt
     Left = 8
     Top = 63
     Width = 209
-    Height = 358
+    Height = 382
     Anchors = [akLeft, akTop, akBottom]
     Caption = #26631#39064
     TabOrder = 1
+    ExplicitHeight = 358
     DesignSize = (
       209
-      358)
+      382)
     object listBox1: TListBox
       Left = 16
       Top = 24
       Width = 177
-      Height = 318
+      Height = 342
       Anchors = [akLeft, akTop, akBottom]
       ItemHeight = 13
       TabOrder = 0
@@ -602,16 +603,17 @@ object F_Prt_Prd_Opt: TF_Prt_Prd_Opt
     end
   end
   object group2: TGroupBox
-    Left = 240
+    Left = 223
     Top = 63
     Width = 329
-    Height = 358
-    Anchors = [akLeft, akTop, akRight, akBottom]
+    Height = 382
+    Anchors = [akLeft, akTop, akBottom]
     Caption = #32534#36753
     TabOrder = 2
+    ExplicitHeight = 358
     DesignSize = (
       329
-      358)
+      382)
     object Label2: TLabel
       Left = 32
       Top = 27
@@ -629,7 +631,7 @@ object F_Prt_Prd_Opt: TF_Prt_Prd_Opt
     object btnAdd: TRzBitBtn
       Tag = 1
       Left = 17
-      Top = 295
+      Top = 319
       Width = 70
       Height = 32
       Anchors = [akLeft, akBottom]
@@ -644,7 +646,7 @@ object F_Prt_Prd_Opt: TF_Prt_Prd_Opt
     object btnDel: TRzBitBtn
       Tag = 2
       Left = 93
-      Top = 295
+      Top = 319
       Width = 70
       Height = 32
       Anchors = [akLeft, akBottom]
@@ -659,7 +661,7 @@ object F_Prt_Prd_Opt: TF_Prt_Prd_Opt
     object btnCancel: TRzBitBtn
       Tag = 4
       Left = 245
-      Top = 295
+      Top = 319
       Width = 70
       Height = 32
       Anchors = [akLeft, akBottom]
@@ -669,11 +671,12 @@ object F_Prt_Prd_Opt: TF_Prt_Prd_Opt
       ImageIndex = 43
       Margin = 5
       NumGlyphs = 2
+      ExplicitTop = 295
     end
     object btnSave: TRzBitBtn
       Tag = 3
       Left = 169
-      Top = 295
+      Top = 319
       Width = 70
       Height = 32
       Anchors = [akLeft, akBottom]
@@ -683,6 +686,7 @@ object F_Prt_Prd_Opt: TF_Prt_Prd_Opt
       ImageIndex = 28
       Margin = 5
       NumGlyphs = 2
+      ExplicitTop = 295
     end
     object tboxName: TEdit
       Left = 72
@@ -696,13 +700,14 @@ object F_Prt_Prd_Opt: TF_Prt_Prd_Opt
       Left = 72
       Top = 64
       Width = 209
-      Height = 209
+      Height = 233
       Anchors = [akLeft, akTop, akBottom]
       Lines.Strings = (
         '')
       ScrollBars = ssVertical
       TabOrder = 5
       OnChange = tboxCodeChange
+      ExplicitHeight = 209
     end
   end
 end

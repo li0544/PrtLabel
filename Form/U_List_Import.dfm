@@ -105,6 +105,7 @@ object F_List_Import: TF_List_Import
     Width = 313
     Height = 153
     DataGrouping.GroupLevels = <>
+    DataSource = ds1
     Flat = True
     FooterColor = clWindow
     FooterFont.Charset = DEFAULT_CHARSET
@@ -122,5 +123,15 @@ object F_List_Import: TF_List_Import
     TitleHeight = 20
     object RowDetailData: TRowDetailPanelControlEh
     end
+  end
+  object AQry_List: TADOQuery
+    Parameters = <>
+    Left = 328
+    Top = 64
+  end
+  object ds1: TDataSource
+    DataSet = AQry_List
+    Left = 368
+    Top = 64
   end
 end

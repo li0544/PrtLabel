@@ -208,24 +208,30 @@ object F_List: TF_List
     end
   end
   object DBGridEh1: TDBGridEh
-    Left = 155
-    Top = 176
+    Left = 211
+    Top = 128
     Width = 473
-    Height = 121
+    Height = 257
     DataGrouping.GroupLevels = <>
     DataSource = ds2
     Flat = True
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = #23435#20307
+    Font.Style = []
     FooterColor = clWindow
     FooterFont.Charset = ANSI_CHARSET
     FooterFont.Color = clWindowText
     FooterFont.Height = -12
     FooterFont.Name = #23435#20307
     FooterFont.Style = []
-    Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit]
+    Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
     OptionsEh = [dghFixed3D, dghHighlightFocus, dghClearSelection, dghAutoSortMarking, dghMultiSortMarking, dghDialogFind, dghColumnResize, dghColumnMove, dghExtendVertLines]
+    ParentFont = False
     PopupMenu = PopupMenu1
     RowDetailPanel.Color = clBtnFace
-    RowHeight = 16
+    RowHeight = 20
     TabOrder = 3
     TitleFont.Charset = ANSI_CHARSET
     TitleFont.Color = clWindowText
@@ -253,60 +259,70 @@ object F_List: TF_List
         FieldName = #23548#20837#26102#38388
         Footers = <>
         Title.TitleButton = True
+        Width = 164
       end
       item
         EditButtons = <>
         FieldName = #23433#35013#22320#22336
         Footers = <>
         Title.TitleButton = True
+        Width = 188
       end
       item
         EditButtons = <>
         FieldName = #38376#26495#26448#36136
         Footers = <>
         Title.TitleButton = True
+        Width = 159
       end
       item
         EditButtons = <>
         FieldName = #32972#26495#26448#36136
         Footers = <>
         Title.TitleButton = True
+        Width = 164
       end
       item
         EditButtons = <>
         FieldName = #26588#20307#26495#26448#36136
         Footers = <>
         Title.TitleButton = True
+        Width = 147
       end
       item
         EditButtons = <>
         FieldName = #23458#25143#22995#21517
         Footers = <>
         Title.TitleButton = True
+        Width = 98
       end
       item
         EditButtons = <>
         FieldName = #32852#31995#26041#24335
         Footers = <>
         Title.TitleButton = True
+        Width = 99
       end
       item
         EditButtons = <>
-        FieldName = #29983#20135#21046#20316#21333#26631#39064
+        FieldName = #38376#26495#38754#31215
         Footers = <>
         Title.TitleButton = True
+        Width = 87
       end
       item
         EditButtons = <>
-        FieldName = #24320#26009#35745#21010#34920#26631#39064
+        FieldName = #32972#26495#38754#31215
         Footers = <>
         Title.TitleButton = True
+        Width = 93
       end
       item
         EditButtons = <>
-        FieldName = #25253#20215#21333#26631#39064
+        FieldName = #26588#20307#26495#38754#31215
         Footers = <>
         Title.TitleButton = True
+        Width = 104
       end>
     object RowDetailData: TRowDetailPanelControlEh
     end
@@ -405,15 +421,15 @@ object F_List: TF_List
     SQL.Strings = (
       'SELECT ListID AS '#35746#21333#32534#21495', '#20132#36135#26085#26399' AS '#22788#29702#26102#38388','#23548#20837#26102#38388', '#23433#35013#22320#22336', '#38376#26495#26448#36136', '
       '    '#32972#26495#26448#36136', '#26588#20307#26495#26448#36136', '#23458#25143#22995#21517', '#32852#31995#26041#24335', '#29983#20135#21046#20316#21333' AS '#29983#20135#21046#20316#21333#26631#39064', '
-      '    '#24320#26009#35745#21010#34920' AS '#24320#26009#35745#21010#34920#26631#39064', '#25253#20215#21333' AS '#25253#20215#21333#26631#39064' '
+      '    '#24320#26009#35745#21010#34920' AS '#24320#26009#35745#21010#34920#26631#39064', '#25253#20215#21333' AS '#25253#20215#21333#26631#39064' ,'#38376#26495#38754#31215','#32972#26495#38754#31215','#26588#20307#26495#38754#31215
       '    FROM List')
-    Left = 56
-    Top = 112
+    Left = 168
+    Top = 104
   end
   object ds2: TDataSource
     DataSet = AQry2
-    Left = 56
-    Top = 144
+    Left = 168
+    Top = 136
   end
   object ATab2: TADOTable
     Left = 56

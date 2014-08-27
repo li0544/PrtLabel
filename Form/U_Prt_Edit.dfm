@@ -4,8 +4,8 @@ object F_Prt_Edit: TF_Prt_Edit
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
   Caption = #32534#36753#25253#34920
-  ClientHeight = 207
-  ClientWidth = 477
+  ClientHeight = 348
+  ClientWidth = 540
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -15,11 +15,12 @@ object F_Prt_Edit: TF_Prt_Edit
   OldCreateOrder = False
   Position = poScreenCenter
   OnCreate = FormCreate
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object btnLab: TRzBitBtn
-    Left = 70
-    Top = 84
+    Left = 56
+    Top = 244
     Width = 100
     Height = 30
     Caption = #26631#31614
@@ -27,8 +28,8 @@ object F_Prt_Edit: TF_Prt_Edit
     OnClick = btnLabClick
   end
   object btnOutPacking: TRzBitBtn
-    Left = 190
-    Top = 84
+    Left = 162
+    Top = 244
     Width = 100
     Height = 30
     Caption = #22806#21253#35013#26631#31614
@@ -36,8 +37,8 @@ object F_Prt_Edit: TF_Prt_Edit
     OnClick = btnOutPackingClick
   end
   object btnDrawer: TRzBitBtn
-    Left = 70
-    Top = 132
+    Left = 374
+    Top = 244
     Width = 100
     Height = 30
     Caption = #38376#26495#29983#20135#21333
@@ -45,8 +46,8 @@ object F_Prt_Edit: TF_Prt_Edit
     OnClick = btnDrawerClick
   end
   object btnPrd: TRzBitBtn
-    Left = 310
-    Top = 84
+    Left = 268
+    Top = 244
     Width = 100
     Height = 30
     Caption = #26588#20307#26495#29983#20135#21333
@@ -54,8 +55,8 @@ object F_Prt_Edit: TF_Prt_Edit
     OnClick = btnPrdClick
   end
   object btnDoorAl: TRzBitBtn
-    Left = 190
-    Top = 132
+    Left = 56
+    Top = 280
     Width = 100
     Height = 30
     Caption = #38109#26694#38376#38376#26495
@@ -65,16 +66,16 @@ object F_Prt_Edit: TF_Prt_Edit
   object panel1: TRzPanel
     Left = 0
     Top = 0
-    Width = 477
+    Width = 540
     Height = 57
     Align = alTop
     BorderOuter = fsGroove
     TabOrder = 5
-    ExplicitWidth = 463
+    ExplicitWidth = 477
     object img1: TImage
       Left = 2
       Top = 2
-      Width = 473
+      Width = 536
       Height = 53
       Align = alClient
       Picture.Data = {
@@ -219,7 +220,7 @@ object F_Prt_Edit: TF_Prt_Edit
     Top = 160
   end
   object frxRprt1: TfrxReport
-    Version = '4.15'
+    Version = '4.9.32'
     DotMatrixReport = False
     IniFile = '\Software\Fast Reports'
     PreviewOptions.Buttons = [pbPrint, pbLoad, pbSave, pbExport, pbZoom, pbFind, pbOutline, pbPageSetup, pbTools, pbEdit, pbNavigator, pbExportQuick]

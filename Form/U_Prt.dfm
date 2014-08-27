@@ -1,6 +1,6 @@
 ﻿object F_Prt: TF_Prt
-  Left = 171
-  Top = 109
+  Left = 0
+  Top = 89
   Caption = #25171#21360#26631#31614
   ClientHeight = 507
   ClientWidth = 712

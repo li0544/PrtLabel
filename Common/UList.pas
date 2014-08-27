@@ -1568,13 +1568,20 @@ var
   i: Integer;
 begin
   EnterMethod('统计标准件');
-  strSQL := 'UPDATE TBod SET 标准件=''是'' WHERE ListID=''' + listID + ''' AND ID IN ('
+  ado1 := TADO.Create(nil);
+
+  strSQL := 'UPDATE TBod SET 标准件='''' WHERE ListID=''' + listID + '''';
+  ado1.Cmd(strSQL);
+
+  strSQL := 'UPDATE TBod SET 标准件=''是'' WHERE ListID=''' + listID + ''' AND ID IN (' + crlf
     + 'SELECT A.ID FROM TBod A,TBod_Standard B WHERE A.ListID=''' + ListID + ''' '
     + 'AND A.BodName=B.[Name] AND A.长度=B.H '
-    + 'AND A.宽度=B.W AND A.材质=B.CZh AND A.备注=B.GYi) ';
+    + 'AND A.宽度=B.W AND A.材质=B.CZh AND A.括号=B.GYi ) ';
   Send(strSQL);
   i := ado1.Cmd(strSQL);
   Send('更新记录数量：' + IntToStr(i));
+
+  ado1.Free;
   ExitMethod('统计标准件');
 end;
 

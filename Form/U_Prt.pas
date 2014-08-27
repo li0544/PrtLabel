@@ -15,7 +15,7 @@ uses
   OleCtrls, UParam, UPub, U_List, U_Flash, DateUtils,
   IniFiles, UList, CnClasses, CnSkinMagic,
   WinSkinData, RzPanel, RzSplit, frxDesgn, frxClass, RzGroupBar, frxDBSet,
-  U_List_Standard, U_List_Bod, U_Prt_Prd_Opt;
+  U_List_Standard, U_List_Bod, U_Prt_Prd_Opt, UChkUser;
 
 procedure showForm(form1: TForm);
 
@@ -836,6 +836,15 @@ begin
   //GetStrCon() :='Provider=SQLOLEDB.1;Password=sa;Persist Security Info=True;User ID=sa;Initial Catalog=DB_LAB;Data Source=JACKSPC';
   Panel3.Visible := False;
 
+  RzGroup2.Items[0].Visible := False;
+  RzGroup2.Items[1].Visible := False;
+
+  RzGroup4.Items[0].Visible := False;
+  RzGroup4.Items[1].Visible := False;
+  RzGroup4.Items[2].Visible := False;
+  RzGroup4.Items[3].Visible := False;
+  RzGroup4.Items[4].Visible := False;
+
   qry1.Close;
   qry2.Close;
   qry3.Close;
@@ -1125,7 +1134,8 @@ begin
     end;
     203:
     begin
-      showForm(F_List_Standard);                                                //标准件设置
+      if FChkUser.ShowModal = mrOk then
+        showForm(F_List_Standard);                                                //标准件设置
     end;
     204:
     begin
