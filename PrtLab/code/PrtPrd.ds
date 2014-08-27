@@ -1,0 +1,26 @@
+var s0 = '';
+var s1 = '{v1}';
+var s2 = '{v2}';
+var s3 = '{v3}';
+
+var d1 = eval('('+s1+')');
+var d2 = eval('('+s2+')');
+var d3 = eval('('+s3+')');
+
+if (
+    (
+        d1.Nam.indexOf('Ë®²Û¹ñ') >= 0 
+        || d1.Nam.indexOf('Ïû¶¾¹ñ') >= 0 
+        //|| d1.Nam.indexOf('Ë«ÃÅ') >= 0
+    ) && (
+        d3.s == '±³°å'  
+        || d3.s == 'ºóµµ' 
+    )
+){ 
+    s0 = d2.V2;
+} 
+else 
+{ 
+    s0 = d2.V1; 
+}
+
